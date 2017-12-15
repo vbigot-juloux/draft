@@ -39,8 +39,10 @@ xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="x
      <!-- @xml:id in TEI -->
      <xsl:variable name="href"><xsl:value-of select="@xml:id"/></xsl:variable>
       <xsl:text> (</xsl:text><a href="{$href}"> 
-      <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']" /></a><xsl:text>)</xsl:text><!-- <xsl:if test="position() != last()"> -->
-      <xsl:text>, </xsl:text> 
+      <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']" /></a><xsl:text>)</xsl:text>
+      <xsl:if test="position() != last()">
+       <xsl:text>, </xsl:text>
+        </xsl:if>
      </xsl:for-each>
     </xsl:for-each>
    </li>
