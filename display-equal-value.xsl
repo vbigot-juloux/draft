@@ -41,7 +41,6 @@ xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="x
       <xsl:text> (</xsl:text><a href="{$href}"> 
       <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']" /></a><xsl:text>)</xsl:text><!-- <xsl:if test="position() != last()"> -->
       <xsl:text>, </xsl:text> 
-     <!-- select only characters in @xml:id after last '_': <xsl:value-of select="substring-after-last('_')"/> doesn't work -->
      </xsl:for-each>
     </xsl:for-each>
    </li>
