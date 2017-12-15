@@ -39,9 +39,11 @@ xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="x
      <xsl:variable name="href"><xsl:value-of select="@xml:id"/> </xsl:variable>
      <a href="{$href}"> 
         <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']" /></a>
-      <!-- look to first value of @ana of element 'w' = value of @xml:id of element 'equiv'  -->
-         <xsl:if test="//w[@type='verb' and @ana[1]] = preceding::category/equiv/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']">
-          <xsl:value-of select="//w[@type='verb'and @ana[1]]"/></xsl:if>
+        <xsl:text>, </xsl:text>
+        <!-- look to first value of @ana of element 'w' = value of @xml:id of element 'equiv'  -->
+         <!-- previous attempt <xsl:if test="//w[@type='verb' and @ana[1]] = preceding::category/equiv/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']">
+          <xsl:value-of select="//w[@type='verb'and @ana[1]]"/></xsl:if> -->
+       <xsl:if test="current()"><xsl:value-of select="current()[text()]"/></xsl:if>
    </xsl:for-each>
   </li>
  </xsl:for-each>
