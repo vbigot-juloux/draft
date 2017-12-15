@@ -37,13 +37,22 @@ xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="x
    <xsl:for-each select="//w[@type='verb']">
    <!-- @xml:id in TEI -->
      <xsl:variable name="href"><xsl:value-of select="@xml:id"/> </xsl:variable>
-     <a href="{$href}"> 
+    <!-- look to first value of @ana of element 'w' = value of @xml:id of element 'equiv'  -->
+    <!-- previous attempt 
+    <a href="{$href}"> 
         <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']" /></a>
         <xsl:text>, </xsl:text>
-        <!-- look to first value of @ana of element 'w' = value of @xml:id of element 'equiv'  -->
-         <!-- previous attempt <xsl:if test="//w[@type='verb' and @ana[1]] = preceding::category/equiv/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']">
+        
+          <xsl:if test="//w[@type='verb' and @ana[1]] = preceding::category/equiv/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']">
           <xsl:value-of select="//w[@type='verb'and @ana[1]]"/></xsl:if> -->
-       <xsl:if test="current()"><xsl:value-of select="current()[text()]"/></xsl:if>
+    
+     <xsl:choose>
+      <xsl:when test="//w[@type='verb'and @ana[1]] = preceding::category/equiv/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']"><xsl:copy-of select="current()[text()]" /></xsl:when><xsl:otherwise><xsl:copy-of select="current()!='hidden'"/>
+       </xsl:otherwise>
+     </xsl:choose>
+     <xsl:text> (</xsl:text><a href="{$href}"> 
+       <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']" /></a><xsl:text>)</xsl:text><!-- <xsl:if test="position() != last()"> -->
+          <xsl:text>, </xsl:text>
    </xsl:for-each>
   </li>
  </xsl:for-each>
