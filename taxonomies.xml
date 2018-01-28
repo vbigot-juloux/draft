@@ -453,3 +453,79 @@
                         <!-- end subjective Data -->
                     </taxonomy>
                 </classDecl>
+
+<-- Section for translation -->
+<div4 n="2" type="part" xml:id="ktu1-3_ii_l4b_to_16"
+                                ana="#ktu1-3_ii_l4b_to_16_anal" corresp="#ktu1-3_ii_l4b_to_16_b_int">
+                                <head>ʿAnatu is fighting in the valley</head>
+                                <lg>
+                                    <l n="4b-5a" xml:id="ktu1-3_ii_l4b-5a" ana="#ktu1-3_ii_l4b-5a_int" corresp="#ktu1-3_ii_l4b-5a_int">
+                                        <w type="coo">w</w><space/>
+                                        <w type="verb" ana="#qry #yQTL #verb.motion #meeting #ANT" xml:id="ktu1-3_ii_l4b-5a_tqry" lemmaRef="../uga/verb.html#qry"><damage degree="medium" facs="definir"><supplied resp="KTU">t</supplied></damage>qry</w>
+                                        <g>.</g>
+                                        <w type="noun" lemmaRef="uga/noun.xml#ġlm"
+                                            xml:id="ġlmm_4b-5a">ġlmm</w>
+                                        <lb/><w type="prep">b</w><space/>
+                                        <w type="noun" ana="#ŠT" lemmaRef="uga/noun.xml#št">št</w>
+                                        <g>.</g>
+                                        <w type="noun" ana="#ĠR" lemmaRef="uga/noun.xml#ġr">ġr</w>
+                                        <g>.</g>
+                                    </l>
+                                  <!-- other <lg><l> -->
+                                  
+ </div 4>
+  
+  <-- and interpretation section -->
+    
+    <div1 type="interp" xml:id="ACTIVITY">
+                        <head>Text investigation</head>
+                        <interpGrp resp="#Juloux" xml:id="hermeneutics" type="structuralUnit"
+                            ana="#taxonomies">
+                            <!-- ref -->
+                            <interp n="1" xml:id="whatAction" ana="#primaryData #objectiveVar #action #verb.category"/>
+                            <interp n="2" xml:id="whatResult" ana="#objectiveVar #result"/>
+                            <!-- castList > castItem -->
+                            <interp n="3" xml:id="whatCharacter" ana="#primaryData #objectiveVar #Character #Genetic-Sex"/>
+                            <interp n="4" xml:id="whatRole" ana="#objectiveVar #role"/>
+                            <!-- view -->
+                            <interp n="5" xml:id="whatContext" ana="#objectiveVar #context"/>
+                            <interp n="6" xml:id="whatSphere" ana="#objectiveVar #sphere"/>
+                            <!-- stage -->
+                            <interp n="7" xml:id="whatBehavior" ana="#subjectiveVar #consequence #EmotionCategory #hasEmotionIntensity #degreeDesire #voluntaryIntent">How acts the animated
+                                entity</interp>
+                        </interpGrp>
+                       <!-- example -->
+                        <div2 ana="#hermeneutics" xml:id="ktu1-3_ii_l4b_to_16b_int">
+                            <!-- taxonomy -->
+                            <interp xml:id="ktu1-3_ii_l4b_5a_int" ana="#ktu1-3_ii_l4b-5a" corresp="#ktu1-3_ii_l4b_5a">
+                                <desc>
+                                    <ref n="1" target="#whatAction #ktu1-3_ii_l4b-5a_tqry" type="verb" ana="#verb.motion #meeting #qry">Action belongs to verb motion, subcategory meeting: qry</ref>;
+                                    <ref n="2" target="#whatResult"><stage ana="#fightBattle">to fight a battle<note>Personnal view: she is meeting chiefs of each side (East and West)</note></stage>
+                                    </ref>dt
+                                    <castList>
+                                        <castItem n="1">
+                                            <ref n="3" target="#whatCharacter"><persName type="character" ana="#ANT #Female">ʿAnatu</persName>;</ref>
+                                            <ref n="4" target="whatRole"><state ana="#active" cert="high"/>role: active</ref>
+                                        </castItem>
+                                        <castItem n="2">
+                                            <persName type="character" ana="#UNK #Unknown_Sx" cert="low">Prince or messengers</persName>;
+                                            <state ana="#unknown_Ro"/>role: unknown
+                                        </castItem>
+                                    </castList>
+                                    <view>
+                                        <ref n="5" target="#whatContext"><placeName ana="#unknown_C">Unknown<geo>valley</geo></placeName></ref>
+                                        <ref n="6" target="#whatSphere"><location ana="#outside"/>outside her household</ref>
+                                    </view>
+                                    <stage>
+                                        <ref n="7" target="#whatBehavior">
+                                            <span ana="#unknown_Vol #free #unknown_E #NA_E #unknown_dD">Voluntary intentionality and emotion, unknown regarding narrative but with free will.</span>
+                                            <span ana="#affectEntity_and_other">Consequence: an impact on ʾAnatu and others</span>
+                                        </ref>
+                                    </stage>
+                                </desc>
+                            </interp>
+                          <!-- other interp for all lines -->
+      </div2>
+      <!-- other section <div2> -->
+    </div1>
+                       
