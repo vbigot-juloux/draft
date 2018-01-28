@@ -1,0 +1,455 @@
+<classDecl xml:id="taxonomies">
+                    <!-- usefull for Hermeneutics -->
+                    <!-- Primary Data -->
+                    
+                    <taxonomy xml:id="primaryData" ana="#taxonomies">
+                        <category xml:id="action" ana="#primData">
+                        </category> <!-- type: verb -->
+                        <category xml:id="Being" ana="#primData"/> <!-- animated entity -->
+                    </taxonomy>
+                    <!-- End Primary Data -->
+
+                    <!-- Objective Data -->
+                    <taxonomy xml:id="objectiveVar" ana="#taxonomies">
+                        <!-- sphere -->
+                        <category xml:id="sphere" ana="#objectiveVar">
+                            <category xml:id="inside">
+                                <catDesc>event takes place inside the household</catDesc>
+                            </category>
+                            <category xml:id="outside">
+                                <catDesc>event takes place outside the household</catDesc>
+                            </category>
+                            <category xml:id="unknown_S"/>
+                            <category xml:id="B_ctx_S"/>
+                        </category>
+                        <!-- context -->
+                        <category xml:id="context" ana="#objectiveVar">
+                            <category n="1" xml:id="assembly"/>
+                            <category n="2" xml:id="battle"/>
+                            <category n="3" xml:id="burial"/>
+                            <category n="4" xml:id="care"/> <!-- medical care -->
+                            <category n="5" xml:id="cultual"/>
+                            <category n="6" xml:id="feast"/>
+                            <category n="7" xml:id="hunting"/>
+                            <category n="8" xml:id="landscapingProjects"/>
+                            <category n="9" xml:id="lawsuit"/>
+                            <category n="10" xml:id="maintenance"/> 
+                            <category n="11" xml:id="ritual"/>
+                            <category n="12" xml:id="singleCombat"/>
+                            <category n="13" xml:id="Trade"/>
+                            <category n="14" xml:id="visit"/>
+                            <category n="15" xml:id="wedding"/>
+                            <category n="16" xml:id="unknown_C"/>
+                            <category n="17" xml:id="B_ctx_C"/>
+                        </category>
+                        <!-- role -->
+                        <category xml:id="role" ana="#objectiveVar">
+                            <catDesc>role of the animated entity</catDesc>
+                            <category xml:id="active"/>
+                            <category xml:id="passive"/>
+                            <category xml:id="both_active"/>
+                            <category xml:id="unknown_R"></category>
+                        </category>
+                        
+                        
+                        <!-- semantic --> <!-- NA PAS OUBLIER DE CHANGER LES INDEX DANS R POUR CHAQUE AJOUT -->
+                        <category xml:id="verb.category" ana="#objectiveVar #action">
+                            <catDesc n="1" xml:lang="en">According to WordNet lexical database</catDesc>
+                            <catDesc n="2" xml:lang="en">verbal semantic of event according to the semantic group of 
+                                <affiliation>
+                                    <name n="1" type="lex-database"><ref target="http://wordnet.princeton.eduWordNet/ref">WordNet</ref></name>
+                                    <name n="2" type="lex-database"><ref target="https://framenet2.icsi.berkeley.edu">FrameNet</ref></name>
+                                    <name n="3" type="lex-database"><ref target="http://verbs.colorado.edu">VerbNet</ref></name>
+                                    <name n="4" type="dictionary"><ref target="http://live.babelnet.org">BabelNet</ref></name>
+                                </affiliation>
+                            </catDesc>
+                           
+                            <!-- BODY -->
+                            <category n="1" xml:id="verb.body" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of size, temperature change, intensifying, etc.” -->
+                                <catDesc>taxonomy: verbs of bodily functions and care</catDesc>
+                            </category>
+                            
+                            <!-- COGNITION -->
+                            <category n="2" xml:id="verb.cognition" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of thinking, judging, analyzing, doubting” -->
+                                <catDesc>taxonomy: cognition verbs</catDesc>
+                            </category>
+                           
+                            <!-- COMMUNICATION -->
+                            <category n="3" xml:id="verb.communication" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of telling, asking, ordering, singing” -->
+                                <catDesc>taxonomy: verbs of communication</catDesc>
+                            </category>
+                            
+                            <!-- COMPETITION -->
+                            <category n="4" xml:id="verb.competition" ana="#verb.category #action" resp="Juloux">
+                                <!-- according to WordNet: “verbs of fighting, athletic activities” -->
+                                <catDesc>taxonomy: competition verbs</catDesc>
+                                <category n="1"  xml:id="contend" ana="#verb.competition"> <!-- includes: fight -->
+                                    <catDesc>subcategory of competition verb: contend 
+                                        <term ana="#ḫṣb01 #mḫṣ01" type="baseForm">
+                                            <ptr n="1" target="https://tinyurl.com/kw6nh49" source="Wordnet" next="{01092746}" />
+                                       </term>
+                                    </catDesc> 
+                                    <category ana="#verb.competition #contend" xml:lang="uga">
+                                        <gloss n="1" xml:id="ḫṣb01" target="../uga/verb.html#ḫṣb"/>
+                                        <gloss n="2" xml:id="mḫṣ01" cert="high" target="../uga/verb.html#mḫṣ"/> <!-- voir aussi ml:id="mḫṣ02" humiliation -->
+                                    </category>
+                                </category>
+                                <category n="2" xml:id="conflict" ana="#verb.competition">
+                                    <catDesc>subcategory of competition verb: conflict</catDesc> <!-- i.e. to fight, to battle -->
+                                </category>    
+                            </category>
+                            
+                            <!-- CONSUMPTION -->
+                            <category n="5" xml:id="verb.consumption" ana="#verb.category #action">
+                                <!-- according to WordNet[34]: “verbs of eating and drinking” -->
+                                <catDesc>taxonomy: consumption verbs</catDesc>
+                            </category>
+                            
+                            <!-- CONTACT -->
+                            <category n="6" xml:id="verb.contact" ana="#verb.category #action">
+                                <!-- according to WordNet [35]: “verbs of touching, hitting, tying, digging” -->
+                                <catDesc>taxonomy: verbs of contact (WordNet[35])</catDesc>
+                                <category n="1" xml:id="attaching" ana="#verb.contact"> <!-- includes: to tie, to bind -->
+                                    <catDesc>subcategory of contact's verb: attaching (according to FrameNet) 
+                                        <term ana="#ʿtk01 #šns01" type="baseForm">
+                                            <ptr n="1" target="http://live.babelnet.org/synset?word=bn:00083498v" source="BabelNet"/>
+                                            <ptr n="2" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame=Attaching" source="FrameNet"/>
+                                            <ptr n="3" target="https://tinyurl.com/mpt6vka" source="WordNet" next="(1){01289516}"/>
+                                        </term>    
+                                    </catDesc> 
+                                    <category ana="#verb.contact #attaching" xml:lang="uga">
+                                        <gloss n="1" xml:id="ʿtk01" target="../uga/verb.html#ʿtk"/>
+                                        <gloss n="2" xml:id="šns01" target="./uga/verb.html#šns"/>
+                                    </category>
+                                </category> 
+                                <category n="2" xml:id="closing" ana="#verb.contact">
+                                <catDesc>subcategory of contact's verb: closing 
+                                    <term ana="klʾa01" type="baseForm">   
+                                        <ptr n="1" target="ttp://babelnet.org/synset?word=bn:00019964n" source="BabelNet"/>
+                                    </term> 
+                                </catDesc> 
+                                    <category ana="#verb.contact #closing" xml:lang="uga">
+                                        <gloss n="1" xml:id="klʾa01" target="../uga/verb.html#klʾa"/>
+                                    </category>
+                                </category>
+                                <category n="3" xml:id="placing" ana="#verb.contact"> <!-- to glean, to plunge, to immerse -->
+                                   <catDesc>subcategory of contact's verb: placing (according to FrameNet) 
+                                       <term ana="#ġll01 #ṯʿr01" type="baseForm">
+                                        <ptr n="1" target="http://live.babelnet.org/synset?word=bn:00089596v" source="BabelNet"/>
+                                        <ptr n="2" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame=Placing" source="FrameNet"/>
+                                        <ptr n="3" target="https://tinyurl.com/k6czqaj" source="Wordnet" next="(6){01580466}"/>
+                                       </term>
+                                   </catDesc>
+                                    <category ana="#verb.contact #placing" xml:lang="uga">
+                                       <gloss n="1" xml:id="ġll01" cert="medium"/> <!-- see my comment inside transcription xml:id=ktu1-3_ii_l13b-14a_tġlt -->
+                                       <gloss n="2" xml:id="ṯʿr01"/> 
+                                   </category>
+                               </category> 
+                                <category n="4" xml:id="removing" ana="#verb.contact"> <!-- to drive out, to eject, to evict -->
+                                    <catDesc>subcategory of contact's verb: removing (according to FrameNet) 
+                                        <term ana="#grš01" type="baseForm">
+                                          <ptr n="1" target="http://live.babelnet.org/synset?word=bn:00087776v" source="BabelNet"/>
+                                          <ptr n="2" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame=Removing" source="FrameNet"/>
+                                        </term>
+                                    </catDesc>
+                                    <category ana="#verb.contact #removing" xml:lang="uga">
+                                        <gloss n="1" xml:id="grš01" cert="medium"/>
+                                    </category>
+                                </category>
+                                <category n="5" xml:id="grasping" ana="#verb.contact"> <!-- to clutch, to grasp, to seize -->
+                                    <catDesc>subcategory of contact's verb: grasping (according to Wordnet), and manipulation (according to FrameNet) <!-- but see also manipulation aspect (FrameNet) -->     
+                                        <term ana="#ḥšk01" type="baseForm">
+                                            <ptr n="1" target="http://live.babelnet.org/synset?word=bn:00085207v" source="BabelNet"/>
+                                            <ptr n="2" target="http://bit.ly/2Bzybp4" source="WordNet" next="(13){01215136}"/>
+                                            <ptr n="3" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Manipulation.xml" source="FrameNet"/>
+                                            <ptr n="4" target="http://verbs.colorado.edu/verb-index/vn3.3/vn/hold-15.1.php" source="VerbNet"/>
+                                        </term>
+                                    </catDesc>
+                                    <category ana="#verb.contact #grasping" xml:lang="uga">
+                                        <gloss n="1" xml:id="ḥšk01" cert="medium"/>
+                                    </category>
+                                </category>
+                           </category>
+                            
+                            <!-- CREATION -->
+                            <category n="7" xml:id="verb.creation" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of sewing, baking, painting, performing” -->
+                                <catDesc>taxonomy: creation verbs</catDesc>
+                                <category n="1" xml:id="destroying" ana="#verb.creation">
+                                    <catDesc>subcategory of creaction's verb, as a concept: destroying
+                                        <term type="baseForm">
+                                            <ptr n="1" target="http://verbs.colorado.edu/verb-index/vn/destroy-44.php" source="VerNet"/>
+                                            <ptr n="2" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Destroying.xml" source="FrameNet"/>
+                                            <ptr n="3" target="https://tinyurl.com/mxkdgw8" source="WordNet" next="(42){01622948}"/>
+                                        </term>
+                                    </catDesc>
+                                </category>
+                            </category>
+                            
+                            <!-- EMOTION -->
+                            <category n="8" xml:id="verb.emotion" ana="#verb.category #action" resp="Juloux">
+                                <!-- according to WordNet [37]: “verbs of feeling” -->
+                                <catDesc>taxonomy: emotion or psych verbs</catDesc>
+                                <category n="1" xml:id="humiliation" ana="#verb.emotion">
+                                   <catDesc >subcategory of emotion's verb as a concept of: humiliation
+                                       <term ana="#mḫṣ02 #ṣmt01" type="baseForm">
+                                           <ptr n="1" target="http://babelnet.org/synset?word=bn:00086117v" source="BabelNet" />
+                                           <ptr n="2" target="http://bit.ly/2nftApM" source="WordNet" next="{01804206}" />
+                                           <ptr n="3" target="http://verbs.colorado.edu/propbank/framesets-english-aliases/humiliate.html" source="VerbNet" /><!-- schema of humiliation ‘Arg1-PPT: humiliated entity’ --> 
+                                           <ptr n="4" target="http://verbs.colorado.edu/html_groupings/wound-n.html" source="VerbNet" />
+                                           <ptr n="5" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame=Stimulate_emotion" source="FrameNet" />
+                                       </term>
+                                   </catDesc>
+                                    <category ana="#verb.emotion #humiliation" xml:lang="uga">
+                                       <gloss n="1" xml:id="mḫṣ02" cert="high"/> <!-- see also ml:id="mḫṣ01" competition -->
+                                       <gloss n="2" xml:id="ṣmt01"/>
+                                    </category>  
+                                </category>
+                            </category>
+                            
+                            <!-- MOTION -->
+                            <category n="9" xml:id="verb.motion" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of walking, flying, swimming” -->
+                                <catDesc>taxonomy: motion verbs</catDesc>
+                                <category n="1" xml:id="meeting" ana="#verb.motion"> <!-- includes: encounter -->
+                                    <catDesc>subcategory of motion's verb as a concept: meeting  
+                                        <term ana="#qry01" type="baseForm">
+                                            <ptr n="1" target="http://babelnet.org/synset?word=bn:00085339v" source="BabelNet"/>
+                                            <ptr n="2" target="https://tinyurl.com/l7788n5" source="WordNet" next="(11){02026650}"/>                                    
+                                        </term> 
+                                    </catDesc>
+                                    <category ana="#verb.motion #meeting" xml:lang="uga">
+                                    <gloss n="1" xml:id="qry01"/>
+                                  </category>
+                                </category>
+                                <category n="2" xml:id="self_motion" ana="#verb.motion">
+                                    <catDesc>subcategory of motion's verb as a concept: self motion 
+                                        <term ana="mġy01" type="baseForm">
+                                            <ptr n="1" target="http://babelnet.org/synset?word=bn:00085715v" source="BabelNet"/>
+                                            <ptr n="2" target="https://tinyurl.com/n2b9m66" source="WordNet" next="(17){01999581}"/>
+                                            <ptr n="3" target="http://verbs.colorado.edu/html_groupings/proceed-v.html" source="VerbNet" next="2"/>
+                                            <ptr n="4" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Self_motion.xml" source="FrameNet"/>
+                                        </term>
+                                    </catDesc>                                 
+                                    <category ana="#verb.motion #self_motion" xml:lang="uga">
+                                        <gloss n="1" xml:id="mġy01"/> <!-- [2] of DULAT -->
+                                    </category>
+                                </category>
+                                <category n="3" xml:id="arriving" ana="#verb.motion">
+                                    <catDesc>subcategory of motion's verb as a concept: arriving 
+                                        <term ana="#ql01" type="baseForm">
+                                            <ptr n="1" target="http://babelnet.org/synset?word=bn:00085363v" source="BabelNet"/>
+                                            <ptr n="2" target="https://tinyurl.com/kj25mzp" source="WordNet" next="(85){02020375}"/>
+                                            <ptr n="3" target="http://verbs.colorado.edu/html_groupings/enter-v.html" source="VerbNet" next="2"/>
+                                            <ptr n="4" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame=Arriving" source="FrameNet"/>
+                                        </term>
+                                    </catDesc>
+                                    <category ana="#verb.motion #arriving" xml:lang="uga">
+                                        <gloss n="1" xml:id="ql01"/> <!-- forme Št -->
+                                    </category>
+                                </category>
+                            </category>
+                            
+                            <!-- PERCEPTION -->
+                            <category n="10" xml:id="verb.perception" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of seeing, hearing, feeling” -->
+                                <catDesc>taxonomy: perception verbs</catDesc>
+                                 <category n="1" xml:id="observation" ana="#verb.perception">
+                                     <catDesc>subcategory of perception's verb as a concept: observation
+                                         <term ana="#ʿn01 #ḥdy01" type="baseForm">
+                                             <ptr n="1" target="http://babelnet.org/synset?word=bn:00090463" source="BabelNet"/>
+                                             <ptr n="2" target="https://tinyurl.com/l2o3bku" source="WordNet" next="39"/>
+                                         </term>
+                                     </catDesc>
+                                     <category ana="#verb.perception #observation" xml:lang="uga">
+                                        <gloss n="1" xml:id="ʿn01"/>
+                                        <gloss n="2" xml:id="ḥdy01"/>
+                                    </category>
+                                 </category>
+                            </category>
+                            
+                            <!-- POSSESSION -->
+                            <category n="11" xml:id="verb.possession" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of buying, selling, owning” -->
+                                <catDesc>taxonomy: verbs of possession</catDesc>
+                            </category>
+                            
+                            <!-- SOCIAL -->
+                            <category n="12" xml:id="verb.social" ana="#verb.category #action">
+                                <!-- according to WordNet: “verbs of political and social activities and events” -->
+                                <catDesc>taxonomy: verbs of social</catDesc>
+                            </category>
+                            
+                            <!-- STATIVE -->
+                            <category n="13" xml:id="verb.stative" ana="#verb.category #action"> <!-- According to Bordreuil et Pardee: “dénote l'état lui-même, soit le fait d'atteindre cet état” p. 58 du Manuel d'Ugaritic -->
+                                <!-- according to WordNet[42]: “verbs of being, having, spatial relations” -->
+                                <catDesc>taxonomy: stative verbs</catDesc>
+                                <category n="1" xml:id="satisfying" ana="#verb.stative">
+                                    <catDesc>subcategory of stative's verb as a concept of: satisfying (following FrameNet) 
+                                        <term type="baseForm">
+                                           <ptr n="1" target="http://babelnet.org/synset?word=bn:00088614v" source="BabelNet"/>
+                                           <ptr n="2" target="http://verbs.colorado.edu/html_groupings/satisfy-v.html" source="VerbNet" next="2"/>
+                                           <ptr n="3" target="https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame=Satisfying" source="FrameNet"/>
+                                           <ptr n="4" target="https://tinyurl.com/mbc24k8" source="WordNet" next="(13){02677669}"/>
+                                       </term>
+                                    </catDesc>
+                                </category>
+                                <category n="2" xml:id="fill_withEmotion" ana="#verb.stative">
+                                    <catDesc>subcategory of stative's verb as a concept of: filling with emotion (following VerbNet sense 2)
+                                        <term ana="#ġdd01" type="baseForm">
+                                            <ptr n="1" target="http://babelnet.org/synset?word=bn:00094669v" source="BabelNet"/>
+                                            <ptr n="2" target="http://verbs.colorado.edu/html_groupings/swell-v.html" source="VerbNet" next="2"/>
+                                            <ptr n="1" target="https://tinyurl.com/mof3vu2" source="WordNet" next="(1){02632486}"/>
+                                        </term>
+                                    </catDesc>
+                                    <category ana="#verb.stative #fill_withEmotion" xml:lang="uga">
+                                        <gloss xml:id="ġdd01"/> <!-- form D -->
+                                    </category>
+                                </category>
+                                <category n="3" xml:id="time_vector" ana="#verb.stative">
+                                   <catDesc>subcategory of stative's verb as a concept of: stretch out over a distance, space, time, or scope (following Wordnet[42])
+                                     <term ana="#ʿtq01" type="baseForm">
+                                        <ptr n="1" target="http://live.babelnet.org/synset?word=bn:00087905v" source="BabelNet"/>
+                                        <ptr n="2" target="http://verbs.colorado.edu/verb-index/vn3.3/vn/spend_time-104.php#spend_time-104" source="VerbNet"/>
+                                        <ptr n="3" target="https://tinyurl.com/y7rrx8oa" source="WordNet" next="(42){02691775}"/>
+                                        <ptr n="4" target="https://framenet.icsi.berkeley.edu/fndrupal/frameIndex" source="FrameNet" />
+                                     </term>
+                                   </catDesc>
+                                   <category ana="#verb.stative #time_vector" xml:lang="uga">
+                                      <gloss n="1" xml:id="ʿtq01" target="../uga/verb.html#ʿtq"/>
+                                   </category>
+                                </category>
+                            </category>
+                        </category>
+                        
+                        
+                        <!-- result of the action -->
+                        <category xml:id="result" ana="#objectiveVar #action">
+                            <catDesc>Result of the action verb.category</catDesc>
+                            <category n="1" xml:id="bringingTrophy"/>
+                            <category n="2" xml:id="confirmVictory"/>
+                            <category n="3" xml:id="deportation"/>
+                            <category n="4" xml:id="death_ofOpponent"/>
+                            <category n="5" xml:id="defeate_ofOpposition"/>
+                            <category n="6" xml:id="eviction"/>
+                            <category n="7" xml:id="fightBattle"></category>
+                            <category n="8" xml:id="injury_ofOpponent"/> <!-- physical injury -->
+                            <category n="9" xml:id="LaunchEvent"/>
+                            <category n="10" xml:id="leavingHousedold"/>
+                            <category n="11" xml:id="reachHousehold"></category> 
+                            <category n="12" xml:id="regainingStrength"/>
+                            <category n="13" xml:id="take_overThrone"/>
+                            <category n="14" xml:id="trauma"/> <!-- psychological injury -->
+                            <category n="15" xml:id="unknown_Ro"/>
+                            <category n="16" xml:id="B_ctx_R"/>
+                        </category>
+
+                        <!-- biological sex -->
+                        <category xml:id="Genetic-Sex" ana="#objectiveVar">
+                            <catDesc>“Biological” sex</catDesc>
+                            <category xml:id="Male"/>
+                            <category xml:id="Female"/>
+                            <category xml:id="Unknown_Sx"/>
+                        </category>
+                    </taxonomy>
+                    <!-- End Objective Data -->
+
+                    <!-- Subjective Data -->
+                    <taxonomy xml:id="subjectiveVar" ana="#taxonomies">
+                        <category xml:id="EmotionCategory" ana="#subjectiveVar">
+                            <catDesc>Emotion categories according to <ref target="https://www.w3.org/TR/emotion-voc/#fsre-dimensions">FSRE</ref></catDesc>
+                            <category n="1" xml:id="anger"/>
+                            <category n="2" xml:id="anxiety"/>
+                            <category n="3" xml:id="being_hurt"/>
+                            <category n="4" xml:id="compassion"/>
+                            <category n="5" xml:id="contempt"/>
+                            <category n="6" xml:id="contentment"/>
+                            <category n="7" xml:id="despair"/>
+                            <category n="8" xml:id="disappointment"/>
+                            <category n="9" xml:id="discouragement"/>
+                            <category n="10" xml:id="disgust"/>
+                            <category n="11" xml:id="fear"/>
+                            <category n="12" xml:id="guilt"/>
+                            <category n="13" xml:id="happiness"/>
+                            <category n="14" xml:id="hate"/>
+                            <category n="15" xml:id="interest"/>
+                            <category n="16" xml:id="irritation"/>
+                            <category n="17" xml:id="jealousy"/>
+                            <category n="18" xml:id="joy"/>
+                            <category n="19" xml:id="love"/>
+                            <category n="20" xml:id="pride"/>
+                            <category n="21" xml:id="sadness"/>
+                            <category n="22" xml:id="satisfaction"/>
+                            <category n="23" xml:id="shame"/>
+                            <category n="25" xml:id="stress"/>
+                            <category n="26" xml:id="surprise"/>
+                            <category n="27" xml:id="unsatisfaction"/>
+                            <category n="28" xml:id="unknown_E"/>
+                        </category>
+                         <category xml:id="hasEmotionIntensity" ana="EmotionCategory">
+                                <category n="1" xml:id="feeble"/>
+                                <category n="2" xml:id="medium"/>
+                                <category n="3" xml:id="normal"/>
+                                <category n="4" xml:id="hight"/>
+                                <category n="5" xml:id="veryHight"/>
+                                <category n="6" xml:id="NA_E"/>
+                         </category>  
+                            <category xml:id="consequence" ana="#subjectiveVar">
+                                <category n="1" xml:id="affectEntity"/>
+                                <category n="2" xml:id="affectEntity_and_other"/>
+                                <category n="3" xml:id="affectOther"/>
+                            </category>
+                            <category xml:id="degreeDesire" ana="#subjectiveVar"> <!-- for dregree of desire -->
+                                <category n="1" xml:id="one_dD"/>
+                                <category n="2" xml:id="two_dD"/>
+                                <category n="3" xml:id="three_dD"/>
+                                <category n="4" xml:id="four_dD"/>
+                                <category n="5" xml:id="five_dD"/>
+                                <category n="6" xml:id="unknown_dD"/>
+                                <category n="7" xml:id="B_ctx_dD"/>
+                            </category>
+                        <category xml:id="voluntaryIntent" ana="#subjectiveVar">
+                            <category n="1" xml:id="toAdvocate"/>
+                            <category n="2" xml:id="toBlame"/>
+                            <category n="3" xml:id="toBuild"/>
+                            <category n="4" xml:id="toBuy"/>
+                            <category n="5" xml:id="toClean"/>
+                            <category n="6" xml:id="toCareFor"/>
+                            <category n="7" xml:id="toClaim"/>
+                            <category n="8" xml:id="toComplain"/>
+                            <category n="9" xml:id="toCure"/>
+                            <category n="10" xml:id="toDefense_inCourt"/>
+                            <category n="11" xml:id="toDestroy"/>
+                            <category n="12" xml:id="toFeed"/>
+                            <category n="13" xml:id="toFight"/>
+                            <category n="14" xml:id="toGiveBirth"/>
+                            <category n="15" xml:id="toKill"/>
+                            <category n="16" xml:id="toMakeLove"/>
+                            <category n="17" xml:id="toNegociate"/>
+                            <category n="18" xml:id="toObserve"/>
+                            <category n="19" xml:id="toObey_orders"></category>
+                            <category n="20" xml:id="toPerform_aRitual"/>
+                            <category n="21" xml:id="toPray"/>
+                            <category n="22" xml:id="toProtect"/>
+                            <category n="23" xml:id="toProve"/>
+                            <category n="24" xml:id="toRevenge"/>
+                            <category n="25" xml:id="toSell"/>
+                            <category n="26" xml:id="toSentence"/>
+                            <category n="27" xml:id="toThreaten"/>
+                            <category n="28" xml:id="unknown_Vol"/> 
+                        </category>
+                        <category xml:id="motivation_vI">
+                                <category n="1" xml:id="pressure"/>
+                                <category n="2" xml:id="free"/>
+                         </category>
+                         <category xml:id="fallibility" ana="#subjectiveVar">
+                                <category n="1" xml:id="yes_f"/>
+                                <category n="2" xml:id="no_f"/>
+                                <category n="3" xml:id="lackEvidence_f"/>
+                         </category>
+                        <!-- end subjective Data -->
+                    </taxonomy>
+                </classDecl>
