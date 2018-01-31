@@ -1,4 +1,4 @@
-<!-- problem encounter: match @xml:id to @target -->
+<!-- problem encounter: match @xml:id to @target, then display text() -->
 
 <-- TEI example -->
 <!-- in <teiHeader> -->
@@ -9,8 +9,8 @@
                <!-- other <category> -->
                <category n="5" xml:id="abb-tns" ana="#tense">
                   <catDesc>Tense</catDesc>
-                  <category n="1" ana="#tns.perf #tense"><desc><ref target="#f">perfective</ref></desc></category>
-                  <category n="2" ana="#tns.imperf #tense"><desc><ref target="#d">imperfective</ref></desc></category>
+                  <category n="1" ana="#tns.perf #tense"><desc><ref target="#cit.perf">perfective</ref></desc></category>
+                  <category n="2" ana="#tns.imperf #tense"><desc><ref target="#cit.imperf">imperfective</ref></desc></category>
                </category>
                <!-- other <category> -->
              </taxonomy>
@@ -21,7 +21,7 @@
  
  <div ana="#abbrev" xml:id="abbrev-annot">
            <!-- other <cit> -->
-            <cit ana="#tns.perf" xml:id="f" corresp="#f">
+            <cit ana="#tns.perf" xml:id="cit.perf">
                <quote n="1">[...] for practical reasons, be rendered by a past tense of verbs which express action or
                by the present of verbs which express a state.
                   <bibl><ref target="bibliography.html#bib-ling-001">Lipiński</ref>, 2001:343</bibl></quote>
@@ -30,7 +30,7 @@
                   or a state is being entered upon under the influence of another activity or state. This information can be translate in European
                   languages by a present, a future, a future perfect, an imperfect [...]<bibl><ref target="bibliography.html#bib-ling-001">id.</ref></bibl></quote>
             </cit>
-            <cit ana="#tns.imperf" xml:id="d" corresp="#d">
+            <cit ana="#tns.imperf" xml:id="cit.imperf">
                <quote n="1">blablabla</quote>
             </cit>
            <!-- other <cit> -->
@@ -38,7 +38,10 @@
 
 
 <!-- XSLT version 3.0, Saxon 9.7  --> 
-
+<xsl:key name="abbrev-category" match="category[@n]" use="@n" />
+<xsl:key name="cit-abbrev" match="div/cit[@xml:id]" use="@xml:id"/>
+         
+         
 <xsl:template match="/" >
         <html>
             <head>
@@ -83,13 +86,17 @@
          </xsl:for-each> 
     </xsl:template>
     
-    <xsl:template match="cit[@ana]">
+   <xsl:template match="cit[@ana]">
+        <xsl:variable name="abbrev-category" select="key('abbrev-category', @n)/desc/ref"/>
+        <xsl:variable name="cit-abbrev" select="key('cit-abbrev', @xml:id)"/>
+        <xsl:variable name="referenced-abbrev-target" select="key('cit-abbrev', @xml:id || translate(@target, '#', ''), $cit-abbrev)/text() "/>
         <xsl:for-each select=".">
-            <a name="{@xml:id}" href="#{@xml:id}" id="{@xml:id}" class="ref-target-cit"><h3><xsl:value-of select="substring-after(@ana, '.')"/><xsl:text> &#8617;</xsl:text></h3></a>
+            <xsl:value-of select="$referenced-abbrev-target"/>
+            <a name="{@xml:id}" href="javascript:history.back(1)" id="{@xml:id}" class="ref-target-cit"><h3><xsl:value-of select="substring-after(@ana, '.')"/>
+                <xsl:value-of select="$referenced-abbrev-target"/> <!-- I want to display "perfective" for example in <desc><ref target="#f">perfective</ref></desc> -->
+                <xsl:text> &#8617;</xsl:text></h3></a>
             <xsl:apply-templates/>
-        </xsl:for-each>
-        
-    </xsl:template>   
+        </xsl:for-each> 
     
     <xsl:template match="quote">
         <ul style="margin-top: 0">
