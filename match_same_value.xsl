@@ -20,6 +20,7 @@
  <!-- in <text> -->
  
  <div ana="#abbrev" xml:id="abbrev-annot">
+           <!-- other <cit> -->
             <cit ana="#tns.perf" xml:id="f" corresp="#f">
                <quote n="1">[...] for practical reasons, be rendered by a past tense of verbs which express action or
                by the present of verbs which express a state.
@@ -32,6 +33,7 @@
             <cit ana="#tns.imperf" xml:id="d" corresp="#d">
                <quote n="1">blablabla</quote>
             </cit>
+           <!-- other <cit> -->
          </div>
 
 
