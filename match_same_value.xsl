@@ -93,7 +93,7 @@
         <xsl:for-each select=".">
             <xsl:value-of select="$referenced-abbrev-target"/>
             <a name="{@xml:id}" href="javascript:history.back(1)" id="{@xml:id}" class="ref-target-cit"><h3><xsl:value-of select="substring-after(@ana, '.')"/>
-                <xsl:value-of select="$referenced-abbrev-target"/> <!-- I want to display "perfective" for example in <desc><ref target="#f">perfective</ref></desc> -->
+                     <xsl:text> (</xsl:text><xsl:value-of select="$referenced-abbrev-target"/><xsl:text>)</xsl:text <!-- I want to display "perfective" for example in <desc><ref target="#f">perfective</ref></desc> -->
                 <xsl:text> &#8617;</xsl:text></h3></a>
             <xsl:apply-templates/>
         </xsl:for-each> 
