@@ -1,0 +1,157 @@
+<div>  
+            <entry>
+               <gramGrp>
+                  <fvLib>
+                     <vColl n="1" xml:id="stem">
+                        <!-- within gramGrp <iTYpe> -->
+                        <symbol n="1" xml:id="stem.G" value="stem-G"/>
+                        <symbol n="2" xml:id="stem.D" value="stem-D"/>
+                        <symbol n="3" xml:id="stem.Š" value="stem-Š"/>
+                        <symbol n="4" xml:id="stem.N" value="stem-N"/>
+                        <symbol n="5" xml:id="stem.Št" value="stem-Št"/>
+                        <symbol n="6" xml:id="stem.Dt" value="stem-Dt"/>
+                        <symbol n="7" xml:id="stem.Gt" value="stem-Gt"/>
+                     </vColl>
+                     <vColl n="2" xml:id="tense">
+                        <!-- within gramGrp <tns> -->
+                        <symbol xml:id="tns.perf" value="perfective"/>
+                        <symbol xml:id="tns.imperf" value="imperfective"/>
+                     </vColl>
+                     <vColl n="3" xml:id="mood">
+                        <symbol xml:id="mood.ind" value="indicative"/>
+                        <symbol xml:id="mood.vent" value="ventive"/>
+                        <!-- first type of subjunctive -->
+                        <symbol xml:id="mood.energ" value="energetic"/>
+                        <!-- second type of subjunctive, also called jussive -->
+                     </vColl>
+                     <vColl n="4" xml:id="property">
+                        <!-- within gramGrp subc -->
+                        <symbol xml:id="prop.trans" value="transitive"/>
+                        <symbol xml:id="prop.intras" value="intransitive"/>
+                     </vColl>
+                     <vMerge xml:id="actor-affixes">
+                        <vColl n="5" xml:id="person">
+                           <symbol xml:id="pers.s1" value="first"/>
+                           <symbol xml:id="pers.s2" value="second"/>
+                           <symbol xml:id="pers.s3" value="third"/>
+                        </vColl>
+                        <vColl n="6" xml:id="gender">
+                           <symbol xml:id="gen.masc" value="masculine"/>
+                           <symbol xml:id="gen.fem" value="feminine"/>
+                           <symbol xml:id="gen.loc" value="locutor"/> <!-- first person -->
+                        </vColl>
+                        <vColl n="7" xml:id="number">
+                           <symbol xml:id="num.sg" value="singular"/>
+                           <symbol xml:id="num.dual" value="dual"/>
+                           <symbol xml:id="num.pl" value="plural"/>
+                        </vColl>
+                     </vMerge>
+                     <vColl n="8" xml:id="affixe">
+                        <symbol xml:id="aff-pref.t" value="t-"/>
+                        <symbol xml:id="aff-pref.y" value="y-"/>
+                        <symbol xml:id="aff-suff.n" value="-n"/>
+                        <symbol xml:id="aff-suff.t" value="-t"/>
+                        <symbol xml:id="aff-inf.t" value="-t-"/>
+                        <symbol xml:id="aff-inf.št" value="-št-"/>
+                     </vColl>
+                  </fvLib>
+               </gramGrp>
+            </entry>
+            
+            <entryFree n="1" xml:id="ġll">
+               <form type="verb">
+                  <orth>ġll</orth>
+                  <pron/>
+               </form>
+               <form type="inflected">
+                  <w n="1" lemma="tġll" xml:id="tġll" ana="#ġll">
+                     <m type="base">
+                        <m type="pref" ana="#aff-pref.t">t</m>
+                        <m type="baseForm">ġll</m>
+                     </m>
+                  </w>
+                  <gramGrp type="baseForm" ana="#ġll">
+                     <gramGrp n="1" ana="#tġll">
+                        <iType ana="#stem.D" value="D" type="semantic-variations"/>
+                        <mood ana="#mood.ind" value="ind"/>
+                        <tns ana="#tns.imperf" value="imperf"/>
+                        <subc ana="#prop.trans" value="trans"/>
+                        <gramGrp n="1.1" ana="#actor-affixes">
+                           <per ana="#pers.s2" value="2"/>
+                           <gen ana="#gen.masc" value="m"/>
+                           <number ana="#num.sg" value="sg"/>
+                        </gramGrp>
+                        <gramGrp n="1.2" ana="#actor-affixes">
+                           <per ana="#pers.s3" value="3"/>
+                           <gen ana="#gen.tem" value="f"/>
+                           <number ana="#num.sg" value="sg"/>
+                        </gramGrp>
+                        <cit ana="#tġll">
+                           <quote n="1" xml:id="tġll01">
+                              <ref
+                                 target="corpus_ilimilku.html#ktu1-3_ii_l13b-14a_tġll"
+                                 >ktu1.3:ii:l13b-14a</ref>
+                           </quote>
+                        </cit>
+                     </gramGrp>
+                  </gramGrp>
+               </form>
+               <sense n="1" ana="#ġll #tġll01" xml:id="ġll01" xml:lang="en">to insert, to plunge</sense>
+               <re n="1" ana="#tġll #ġll01" type="inflected">
+                  <sense >She plunged</sense>
+                  <span type="interp">hermeneutics<ref
+                        target="corpus_ilimilku.html#ktu1-3_ii_l13b-14a_int"
+                        >(1)</ref></span>
+                  <span ana="corpus_ilimilku.html#placing" type="category">Taxo., subcat. of
+                        contact's v.: <ref
+                           target="corpus_ilimilku.html#ġll">placing</ref></span>
+               </re>
+            </entryFree>
+            <entryFree n="2" xml:id="grš">
+               <form type="verb">
+                  <orth>grš</orth>
+               </form>
+               <form type="inflected">
+                  <w n="1" lemma="tgrš" xml:id="tgrš" ana="#grš">
+                     <m type="base">
+                        <m type="pref" ana="#aff-pref.t">t</m>
+                        <m type="baseForm">grš</m>
+                     </m>
+                  </w>
+                  <gramGrp type="baseForm" ana="#grš">
+                     <gramGrp n="1" ana="#tgrš">
+                        <iType ana="#stem.D" value="D" type="semantic-variations"/>
+                        <mood ana="#mood.ind" value="ind"/>
+                        <tns ana="#tns.imperf" value="imperf"/>
+                        <subc ana="#prop.trans" value="trans"/>
+                        <gramGrp n="1.1" ana="#actor-affixes">
+                           <per ana="#pers.s2" value="2"/>
+                           <gen ana="#gen.masc" value="m"/>
+                           <number ana="#num.sg" value="sg"/>
+                        </gramGrp>
+                        <gramGrp n="1.2" ana="#actor-affixes">
+                           <per ana="#pers.s3" value="3"/>
+                           <gen ana="#gen.tem" value="f"/>
+                           <number ana="#num.sg" value="sg"/>
+                        </gramGrp>
+                        <cit ana="#tgrš">
+                           <quote n="1" xml:id="tgrš01">
+                              <ref target="corpus_ilimilku.html#ktu1-3_ii_l15b-16a_tgrš"
+                                 >ktu1.3:ii:l15b-16a</ref>
+                           </quote>
+                        </cit>
+                     </gramGrp>
+                  </gramGrp>
+               </form>
+               <sense n="1" ana="#grš #tgrš01" xml:id="grš01" xml:lang="en">to eject, to drive out, to evict</sense>
+               <sense n="2" ana="#grš #tgrš01" xml:id="grš02" xml:lang="en">to cast out</sense>
+               <re n="1" ana="#tgrš #grš01" type="inflected">
+                  <sense>She drove out</sense>
+                  <span type="interp">hermeneutics<ref
+                     target="corpus_ilimilku.html#ktu1-3_ii_l15b-16a_int"
+                     >(1)</ref></span>
+                  <span ana="corpus_ilimilku.html#removing" type="category">taxo., subcat. of
+                     contact's v.: <ref
+                        target="corpus_ilimilku.html#grš">removing</ref></span>
+               </re>
+            </entryFree>
