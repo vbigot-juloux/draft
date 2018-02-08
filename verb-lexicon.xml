@@ -107,20 +107,27 @@
                            target="corpus_ilimilku.html#ġll">placing</ref></span>
                </re>
             </entryFree>
-            <entryFree n="2" xml:id="grš">
+            <!-- other entryFree -->
+            <entryFree n="6" xml:id="mḫṣ">
                <form type="verb">
-                  <orth>grš</orth>
+                  <orth>mḫṣ</orth>
                </form>
                <form type="inflected">
-                  <w n="1" lemma="tgrš" xml:id="tgrš" ana="#grš">
+                  <w n="1" lemma="tmtḫṣ" xml:id="tmtḫṣ" ana="#mḫṣ">
                      <m type="base">
                         <m type="pref" ana="#aff-pref.t">t</m>
-                        <m type="baseForm">grš</m>
+                        <m type="baseForm">m<c type="infix" ana="#aff-inf.t">t</c>ḫṣ</m>
+                     </m> 
+                  </w>
+                  <w n="2" lemma="tmḫṣ" xml:id="tmḫṣ" ana="#mḫṣ">
+                     <m type="base">
+                        <m type="pref" ana="#aff-pref.t">t</m>
+                        <m type="baseForm">mḫṣ</m>
                      </m>
                   </w>
-                  <gramGrp type="baseForm" ana="#grš">
-                     <gramGrp n="1" ana="#tgrš">
-                        <iType ana="#stem.D" value="D" type="semantic-variations"/>
+                  <gramGrp type="baseForm" ana="#mḫṣ">
+                     <gramGrp n="1" ana="#tmtḫṣ">
+                        <iType ana="#stem.Gt" value="Gt" type="semantic-variations"/>
                         <mood ana="#mood.ind" value="ind"/>
                         <tns ana="#tns.imperf" value="imperf"/>
                         <subc ana="#prop.trans" value="trans"/>
@@ -131,27 +138,60 @@
                         </gramGrp>
                         <gramGrp n="1.2" ana="#actor-affixes">
                            <per ana="#pers.s3" value="3"/>
-                           <gen ana="#gen.tem" value="f"/>
+                           <gen ana="#gen.fem" value="f"/>
                            <number ana="#num.sg" value="sg"/>
                         </gramGrp>
-                        <cit ana="#tgrš">
-                           <quote n="1" xml:id="tgrš01">
-                              <ref target="corpus_ilimilku.html#ktu1-3_ii_l15b-16a_tgrš"
-                                 >ktu1.3:ii:l15b-16a</ref>
+                        <cit ana="#tmtḫṣ">
+                           <quote n="1" xml:id="tmtḫṣ01">
+                              <ref target="corpus_ilimilku.html#ktu1-3_ii_l5b-6a_tmtḫṣ"
+                              >ktu1.3:ii:l5b-6a</ref>
                            </quote>
                         </cit>
                      </gramGrp>
-                  </gramGrp>
+                     <gramGrp n="2" ana="#tmḫṣ">
+                        <iType ana="#stem.D" value="D" type="semantic-variations"/>
+                        <mood ana="#mood.ind" value="ind"/>
+                        <tns ana="#tns.perf" value="perf"/>
+                        <subc ana="#prop.trans" value="trans"/>
+                        <gramGrp n="1.1" ana="#actor-affixes">
+                           <per ana="#pers.s2" value="2"/>
+                           <gen ana="#gen.masc" value="m"/>
+                           <number ana="#num.sg" value="sg"/>
+                        </gramGrp>
+                        <gramGrp n="1.2" ana="#actor-affixes">
+                           <per ana="#pers.s3" value="3"/>
+                           <gen ana="#gen.fem" value="f"/>
+                           <number ana="#num.sg" value="sg"/>
+                        </gramGrp>
+                        <cit ana="#tmḫṣ">
+                           <quote n="1" xml:id="tmḫṣ01">
+                              <ref target="corpus_ilimilku.html#ktu1-3_ii_l7_tmḫṣ"
+                                 >ktu1.3:ii:l7</ref>
+                           </quote>
+                        </cit>
+                     </gramGrp>
+                   </gramGrp>
                </form>
-               <sense n="1" ana="#grš #tgrš01" xml:id="grš01" xml:lang="en">to eject, to drive out, to evict</sense>
-               <sense n="2" ana="#grš #tgrš01" xml:id="grš02" xml:lang="en">to cast out</sense>
-               <re n="1" ana="#tgrš #grš01" type="inflected">
-                  <sense>She drove out</sense>
+               <sense n="1" ana="#mḫṣ #tmḫṣ01" xml:id="mḥṣ01" xml:lang="en">to figth</sense>
+               <sense n="2" ana="#mḥṣ #tmḫṣ01" xml:id="mḥṣ02" xml:lang="en">to destroy</sense>
+               <re n="1" ana="#tmtḫṣ #mḫṣ01" type="inflected" >
+                  <sense>she fought</sense> <span type="cf">iterative function // with <ref
+                     target="corpus_ilimilku.html#ktu1-3_ii_l6b_tḫtṣb">tḫtṣb</ref></span>
                   <span type="interp">hermeneutics<ref
-                     target="corpus_ilimilku.html#ktu1-3_ii_l15b-16a_int"
+                     target="corpus_ilimilku.html#ktu1-3_ii_l5b_6a_int"
                      >(1)</ref></span>
-                  <span ana="corpus_ilimilku.html#removing" type="category">taxo., subcat. of
-                     contact's v.: <ref
-                        target="corpus_ilimilku.html#grš">removing</ref></span>
+                  <span ana="corpus_ilimilku.html#contend" type="category">taxo., subcat. of
+                     competition v. <ref
+                        target="corpus_ilimilku.html#mḫṣ01">contend</ref></span>
+               </re>
+               <re n="2" ana="#tmḫṣ #mḫṣ02" type="inflected">
+                  <sense>she destroyed</sense> 
+                  <span type="interp">hermeneutics
+                     <ref target="corpus_ilimilku.html#ktu1-3_ii_l7_int">(1)</ref>
+                  </span>
+                  <span ana="corpus_ilimilku.html#humiliation" type="category">
+                     taxo., subcat. of emotion's v. as a concept of 
+                     <ref target="corpus_ilimilku.html#mḫṣ02">humiliation</ref>
+                  </span>
                </re>
             </entryFree>
